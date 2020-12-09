@@ -11,11 +11,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 public class ConfigServerApplication {
 
 	public static void main(String[] args) {
-
-		System.out.println("第一次提交");
-		System.out.println("第二次提交");
-
 		SpringApplication.run(ConfigServerApplication.class, args);
 	}
 
 }
+
