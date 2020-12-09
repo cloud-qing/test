@@ -16,6 +16,8 @@ public class ConfigServerApplication {
 		System.out.println("第二次提交");
 		
 		System.out.println("第八次次提交");
+		
+		
 
 		SpringApplication.run(ConfigServerApplication.class, args);
 	}
