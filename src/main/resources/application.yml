@@ -1,0 +1,37 @@
+server:
+  port: 7001
+  
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://192.168.66.166/group-paas/hollicube-config-server.git
+          default-label: master
+          search-paths: config/cloud
+          username: cuiyu  #账号密码写真实的快一些我觉得，不使用也能访问有点慢
+          password: 12345678
+    
+  rabbitmq:         #本地环境不需要配置mq，但是需要启动mq,Springboot会自动连接本地mq
+    host: console.hiadev.tk
+    port: 32310
+    username: user
+    password: f5a63202
+  
+          
+
+eureka:                         #注册服务
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+management:                    #SpringCloud 1.5版本暴露接口，暴露/bus-refresh接口
+  security:
+    enabled: false
+    
+security:                       #是否开启基本的鉴权，默认为true
+  basic:
+    enabled: false
+    
